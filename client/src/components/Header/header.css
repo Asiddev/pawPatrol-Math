@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+input {
+  width: 100px;
+  height: 50px;
+}
+
+img {
+}
+
+.speaker {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.right img {
+  align-self: flex-end;
+  border: 15px solid white;
+}
+
+.hidden {
+  display: none;
+}
