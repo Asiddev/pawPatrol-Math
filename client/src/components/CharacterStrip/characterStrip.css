@@ -37,6 +37,13 @@ div {
   gap: 2.5rem;
 }
 
+.who {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.419);
+}
+
 .pick {
   text-align: center;
   margin-bottom: 20px;
@@ -53,7 +60,7 @@ div {
 }
 
 .adjust-right {
-  margin-right: 250px;
+  margin-right: 10rem;
 }
 
 .cta {

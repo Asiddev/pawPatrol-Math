@@ -88,7 +88,7 @@ function CharacterStrip(props) {
 
   return (
     <>
-      <h2>Who should we ask a math question?</h2>
+      <h2 className="who">Who should we ask a math question?</h2>
       <div className="adjust-right">{characterList}</div>
     </>
   );

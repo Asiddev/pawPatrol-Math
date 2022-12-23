@@ -53,3 +53,9 @@ input :focus {
 .submit {
   text-align: center;
 }
+
+.center {
+  text-align: center;
+  align-items: center;
+  font-size: 2rem;
+}
