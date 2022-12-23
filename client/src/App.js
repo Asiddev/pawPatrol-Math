@@ -48,7 +48,7 @@ function App() {
             </div>
           ) : (
             <div className="model">
-              <h1>MAMA Welcome to Koras Paw Patrol Game!</h1>
+              <h1>Welcome to Koras Paw Patrol Game!</h1>
               <h3>
                 This game was created for my beautiful daughter Kora, to help
                 her learn the importance of addition and subtraction with her
