@@ -37,12 +37,13 @@ function CharacterStrip(props) {
     // alert(`You chose ${event.target.value}`);
 
     generateQuestion();
-    return;
   };
 
   const generateQuestion = function () {
+    let awnser;
     let random1 = Math.floor(Math.random() * 10);
     let random2 = Math.floor(Math.random() * 10);
+
     const getRandomInt = (max, min = 0) => {
       min = Math.ceil(min);
       max = Math.floor(1);
@@ -51,28 +52,44 @@ function CharacterStrip(props) {
     };
 
     let randomOperator = operators[getRandomInt()];
+    switch (randomOperator) {
+      case "-":
+        awnser = random1 - random2;
+        break;
+      case "+":
+        awnser = random1 + random2;
+        break;
+      default:
+        return awnser;
+    }
 
     console.log(randomOperator);
 
-    const question = `What is ${random1} ${randomOperator}  ${random2}`;
+    const question = `What is ${random1} ${randomOperator} ${random2}`;
+    props.setAnswer(awnser);
     props.setQuestion(question);
   };
 
   const characterList = characters.map((character, index) => {
     return (
       <div key={index} className="character-container">
-        <button value={character.name} onClick={pickCharacter}>
+        <button
+          disabled={props.correct}
+          className="cta"
+          value={character.name}
+          onClick={pickCharacter}
+        >
           {character.name}
         </button>
-        <img src={character.imagePath} alt="" />
+        <img className="character" src={character.imagePath} alt="" />
       </div>
     );
   });
 
   return (
     <>
-      <h1>Who should we ask a math question?</h1>
-      <div>{characterList}</div>
+      <h2>Who should we ask a math question?</h2>
+      <div className="adjust-right">{characterList}</div>
     </>
   );
 }

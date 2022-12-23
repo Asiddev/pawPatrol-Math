@@ -6,34 +6,47 @@
   margin: 0 auto;
   border-radius: 50%;
   margin-top: 50px;
+  width: max-content;
   text-align: center;
 }
 
 input {
   width: 100px;
   height: 50px;
+  width: max-content;
+  border: none;
+  border-radius: 10px;
 }
 
-img {
+input :focus {
+  border: none;
+  outline: none;
 }
 
 .speaker {
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
+  animation: none;
+  box-shadow: 0 0 0 3px #fadf00;
 }
 
 .flex {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  justify-content: center;
+  text-align: center;
 }
 
-.right img {
-  align-self: flex-end;
-  border: 15px solid white;
+.form {
+  display: flex;
+  gap: 2.5rem;
 }
 
 .hidden {
   display: none;
+}
+
+.submit {
+  text-align: center;
 }

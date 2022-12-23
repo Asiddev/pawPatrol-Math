@@ -3,12 +3,31 @@ img {
   width: 150px;
 }
 
+.character {
+  animation: pulse 1s infinite ease-in-out alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+button:hover {
+  animation: pulse 1s infinite ease-in-out alternate;
+  color: #fadf00;
+}
+
+button > img {
+  animation: pulse 1s infinite ease-in-out alternate;
+  color: #fadf00;
+}
+
 button {
-  border: none;
-  border-radius: 5px;
-  background-color: aqua;
-  padding: 1rem 1rem;
-  min-width: 70px;
+  border-radius: 20px;
 }
 
 div {
@@ -27,4 +46,96 @@ div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.character-container :hover {
+  animation: pulse 1s infinite ease-in-out alternate;
+}
+
+.adjust-right {
+  margin-right: 250px;
+}
+
+.cta {
+  border: none;
+  font-family: "Play", sans-serif;
+  display: flex;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 30px;
+
+  color: white;
+  background: #2a41c4d3;
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #fadf00;
+}
+
+.cta span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+span {
+  transform: skewX(15deg);
+}
+
+span:nth-child(2) {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+/**************SVG****************/
+
+path.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+path.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover path.three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover path.one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover path.two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #fadf00;
+  }
+  100% {
+    fill: white;
+  }
 }
