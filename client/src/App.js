@@ -1,10 +1,9 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import CharacterStrip from "./components/CharacterStrip/CharacterStrip";
 import Header from "./components/Header/Header";
 import Title from "./components/Title/Title";
-import $ from "jquery";
 
 function App() {
   const [characterName, setCharacterName] = useState("");
