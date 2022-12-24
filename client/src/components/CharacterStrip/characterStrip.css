@@ -7,6 +7,11 @@ img {
   animation: pulse 1s infinite ease-in-out alternate;
 }
 
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
 @keyframes pulse {
   from {
     transform: scale(0.8);

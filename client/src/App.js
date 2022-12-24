@@ -38,6 +38,7 @@ function App() {
             setCharacterName={setCharacterName}
             setQuestion={setQuestion}
             setAnswer={setAnswer}
+            question={question}
           />
         </div>
       ) : (
