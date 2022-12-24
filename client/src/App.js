@@ -11,6 +11,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
+  const [score, setScore] = useState(0);
 
   const loadingController = function () {
     setLoading(true);
@@ -28,11 +29,17 @@ function App() {
       {model ? (
         <div className="App">
           <Title />
+          <h1 className="lower">Score</h1>
+          <div className="score">
+            <div className="score-number">{score}</div>
+            <img src="https://i.imgur.com/BfvINu5.png" alt="score"></img>
+          </div>
           <Header
             characterName={characterName}
             question={question}
             answer={answer}
             setQuestion={setQuestion}
+            setScore={setScore}
           />
           <CharacterStrip
             setCharacterName={setCharacterName}

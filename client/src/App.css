@@ -29,6 +29,22 @@ button {
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
+.lower {
+  height: 5px;
+}
+
+.score {
+  height: 100px;
+}
+
+.score-number {
+  position: absolute;
+  z-index: 99;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+}
+
 .model {
   position: absolute;
   display: flex;

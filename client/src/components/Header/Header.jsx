@@ -13,6 +13,7 @@ function Header(props) {
 
     if (Number(props.answer) === Number(guess)) {
       setCorrect(true);
+      props.setScore((prev) => prev + 1);
       setTimeout(() => {
         setError("Try again!");
         setCorrect(false);
@@ -30,20 +31,19 @@ function Header(props) {
 
   return (
     <>
-      <div className="center">
-        {error && (
-          <div class="alert alert-danger center" role="alert">
-            You were so close Kora! Lets give it another try!
-          </div>
-        )}
-      </div>
+      {error && (
+        <div class="alert alert-danger center" role="alert">
+          You were so close Kora! Lets give it another try!
+        </div>
+      )}
+
       <div className="flex">
         {props.characterName ? (
           <>
             {correct ? (
               <div className="center">
                 <div class="alert alert-success center" role="alert">
-                  ✅ WOO HOO! You got it! Good job Kora ✅
+                  1+ You did it! Good job Kora!
                 </div>
               </div>
             ) : (
