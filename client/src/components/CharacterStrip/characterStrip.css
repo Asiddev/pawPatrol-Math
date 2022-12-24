@@ -75,7 +75,7 @@ div {
   padding: 10px 20px;
   text-decoration: none;
   font-size: 30px;
-
+  text-transform: uppercase;
   color: white;
   background: #2a41c4d3;
   transition: 1s;

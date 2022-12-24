@@ -61,7 +61,7 @@ function App() {
               <h3>
                 This game was created for my beautiful daughter Kora, to help
                 her learn the importance of addition and subtraction with her
-                favourite rescue team!
+                favourite rescue team! (Get 10 Points for Rewards!)
               </h3>
               <p>-Love you ❤️ </p>
               <button onClick={loadingController}>Continue</button>
