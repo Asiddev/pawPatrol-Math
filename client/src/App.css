@@ -62,6 +62,10 @@ button {
   padding: 2rem;
 }
 
+.center-text {
+  text-align: center;
+}
+
 .ring {
   position: absolute;
   top: 50%;
