@@ -32,6 +32,7 @@ function App() {
             characterName={characterName}
             question={question}
             answer={answer}
+            setQuestion={setQuestion}
           />
           <CharacterStrip
             setCharacterName={setCharacterName}

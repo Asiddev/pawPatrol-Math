@@ -65,7 +65,7 @@ function CharacterStrip(props) {
 
     console.log(randomOperator);
 
-    const question = `What is ${random1} ${randomOperator} ${random2}`;
+    const question = `What is ${random1} ${randomOperator} ${random2}?`;
     props.setAnswer(awnser);
     props.setQuestion(question);
   };

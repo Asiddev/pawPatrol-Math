@@ -17,6 +17,7 @@ function Header(props) {
         setError("Try again!");
         setCorrect(false);
         setGuess(0);
+        props.setQuestion(null);
       }, 3000);
     } else {
       setError("Try again!");
@@ -46,31 +47,41 @@ function Header(props) {
                 </div>
               </div>
             ) : (
-              <div className="header">
-                <form className="form" onSubmit={guessController}>
-                  <h1>{props.question + "?"}</h1>
-                  <input
-                    type="number"
-                    placeholder="guess here"
-                    onChange={(e) => setGuess(e.target.value)}
-                  />
-                  <div className="submit">
-                    <button disabled={correct} className="cta" type="submit">
-                      Lets Do It!
-                    </button>
+              <>
+                {props.question && (
+                  <div className="header">
+                    <form className="form" onSubmit={guessController}>
+                      <h1>{props.question}</h1>
+                      <input
+                        type="number"
+                        placeholder="guess here"
+                        onChange={(e) => setGuess(e.target.value)}
+                      />
+                      <div className="submit">
+                        <button
+                          disabled={correct}
+                          className="cta"
+                          type="submit"
+                        >
+                          Lets Do It!
+                        </button>
+                      </div>
+                    </form>
                   </div>
-                </form>
-              </div>
+                )}
+              </>
             )}
           </>
         ) : null}
-        <div className="right">
-          <img
-            className={props.characterName ? "speaker " : "hidden"}
-            src="https://media2.giphy.com/media/DbGKg8qOmGosQUjskR/giphy.gif"
-            alt=""
-          />
-        </div>
+        {props.question && (
+          <div className="right">
+            <img
+              className={props.characterName ? "speaker " : "hidden"}
+              src="https://media2.giphy.com/media/DbGKg8qOmGosQUjskR/giphy.gif"
+              alt=""
+            />
+          </div>
+        )}
       </div>
     </>
   );
