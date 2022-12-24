@@ -43,7 +43,7 @@ function Header(props) {
             {correct ? (
               <div className="center">
                 <div class="alert alert-success center" role="alert">
-                  1+ You did it! Good job Kora!
+                  +1 You did it! Good job Kora!
                 </div>
               </div>
             ) : (
