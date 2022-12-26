@@ -11,6 +11,7 @@ Paw Patrol Academy is a small web application that was created to practice the i
 ## Technologies Used / ## Dependencies
 
 - React
+- Bootstrap
 
 ## Demos
 
